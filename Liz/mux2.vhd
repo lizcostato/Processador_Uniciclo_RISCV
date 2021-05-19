@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity mux2 is port(
+	a, b: in std_logic_vector;
+    sel: in std_logic;
+	s: out std_logic_vector);    
+end mux2;
+
+architecture comportamental of mux2 is
+
+	BEGIN
+	with sel select
+       s <= 	a when '0',
+            	b when others;
+           
+END comportamental;
