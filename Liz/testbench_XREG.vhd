@@ -3,11 +3,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
 
-entity testbench_XREG is
+entity testbench is
 	--
-end testbench_XREG;
+end testbench;
 
-architecture tb of testbench_XREG is
+architecture tb of testbench is
 
 -- Testbench Constants ----------------------------------------------------------
 	constant CLK_HALF_PERIOD        : time      := 5 ns;
@@ -30,28 +30,25 @@ architecture tb of testbench_XREG is
     
   -- DUT component
 	component XREG is
-    generic (
-    	XREG_SIZE:	natural := 32;
-    );
 	port (
     -- Input ---------------------------------------------------
 		clock : in std_logic;
         -- write enable
 		we : in std_logic;
         -- endereço de leitura 1
-		r1_address : in std_logic_vector;
+		r1_address : in std_logic_vector(4 downto 0);
         -- endereço de leitura 2
-        r2_address : in std_logic_vector;
+        r2_address : in std_logic_vector(4 downto 0);
         -- endereço de escrita
-        w_address	: in std_logic_vector;
+        w_address	: in std_logic_vector(4 downto 0);
         -- dado a ser escrito
-		datain : in std_logic_vector;
+		datain : in std_logic_vector(31 downto 0);
 
     -- Output --------------------------------------------------
     	-- dado leitura 1
-      	r1 : out std_logic_vector;
+      	r1 : out std_logic_vector(31 downto 0);
         -- dado leitura 2
-        r2: out std_logic_vector
+        r2: out std_logic_vector(31 downto 0)
  	);
   	end component;
     
@@ -74,7 +71,7 @@ architecture tb of testbench_XREG is
     s_we <= '0';
     s_r1_address <= std_logic_vector(to_unsigned(0,ADDRESS_SIZE));
     wait for WAIT_TIME;
-    assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE-2)) & "00") report "Fail ZERO" severity error;
+    assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE))) report "Fail ZERO" severity error;
     
     s_we <= '1';
     s_w_address <= std_logic_vector(to_unsigned(1,ADDRESS_SIZE));
@@ -96,10 +93,10 @@ architecture tb of testbench_XREG is
     wait for WAIT_TIME;
     assert(s_r2 = std_logic_vector(to_unsigned(2,DATA_SIZE-2)) & "00") report "Fail 1" severity error;
     
-    --s_we <= '1';
-    --s_r1_address <= std_logic_vector(to_unsigned(0,ADDRESS_SIZE));
-    --wait for WAIT_TIME;
-    --assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE))) report "Fail ZERO 2" severity error;
+    s_we <= '1';
+    s_r1_address <= std_logic_vector(to_unsigned(0,ADDRESS_SIZE));
+    wait for WAIT_TIME;
+    assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE))) report "Fail ZERO 2" severity error;
     
     s_clock_stop <=TRUE;
     
