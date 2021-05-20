@@ -42,7 +42,9 @@ entity top_level is
     -- Output --------------------------------------------------
     	-- so pra testar a primeira ligação
         r1_out			: out std_logic_vector(31 downto 0);
-        r2_out			: out std_logic_vector(31 downto 0)
+        r2_out			: out std_logic_vector(31 downto 0);
+        r1_address_out	: out std_logic_vector(4 downto 0);
+        r2_address_out	: out std_logic_vector(4 downto 0);
       	--end_program		: out std_logic;
     );
 end top_level;
@@ -54,7 +56,6 @@ architecture rtl of top_level is
     signal s_pcout			: std_logic_vector(31 downto 0) := (others => '0');
     signal s_instruction	: std_logic_vector(31 downto 0) := (others => '0');
     signal s_pc_plus4		: std_logic_vector(31 downto 0) := (others => '0');
-    signal s_instruction1	: std_logic_vector(31 downto 0) := (others => '0');
     
 	begin
     
@@ -68,16 +69,17 @@ architecture rtl of top_level is
     -- Instruction Memory
     comp_ROM: mem_ROM_rv
     	port map(
-        	address => s_pcout, 
-       		dataout => s_instruction1);
+        	-- o tamanho do s_pcout aqui depende da quantidade de linhas da ROM
+        	address => s_pcout(1 downto 0), 
+       		dataout => s_instruction);
     
     comp_XREG: XREG
     	port map(
         	clock => clock_in, 
             we => '1', 
-            r1_address => s_instruction1(19 downto 15), 
-            r2_address => s_instruction1(24 downto 20), 
-            w_address => s_instruction1(11 downto 7), 
+            r1_address => s_instruction(19 downto 15), 
+            r2_address => s_instruction(24 downto 20), 
+            w_address => s_instruction(11 downto 7), 
             datain => data_in, 
             r1 => r1_out, 
             r2 => r2_out);
@@ -109,4 +111,8 @@ architecture rtl of top_level is
     --comp_mux2_ula_RAM: mux2
     --	port map(a =>, b =>, sel =>, s =>);
 	
+    -- só pro primeiro teste
+    r1_address_out <= s_instruction(19 downto 15);
+    r2_address_out <= s_instruction(24 downto 20);
+    
 end rtl;
