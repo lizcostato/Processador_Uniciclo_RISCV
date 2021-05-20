@@ -95,7 +95,16 @@ architecture tb of testbench is
     
     s_we <= '1';
     s_r1_address <= std_logic_vector(to_unsigned(0,ADDRESS_SIZE));
-    wait for WAIT_TIME;
+    s_w_address <= std_logic_vector(to_unsigned(2,ADDRESS_SIZE));
+    s_datain <= std_logic_vector(to_unsigned(2,DATA_SIZE-2)) & "00";
+    wait for WAIT_TIME;    
+    assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE))) report "Fail ZERO 2" severity error;
+    
+    s_we <= '1';
+    s_r1_address <= std_logic_vector(to_unsigned(0,ADDRESS_SIZE));
+    s_w_address <= std_logic_vector(to_unsigned(2,ADDRESS_SIZE));
+    s_datain <= std_logic_vector(to_unsigned(2,DATA_SIZE-2)) & "00";
+    wait for WAIT_TIME;    
     assert(s_r1 = std_logic_vector(to_unsigned(0,DATA_SIZE))) report "Fail ZERO 2" severity error;
     
     s_clock_stop <=TRUE;

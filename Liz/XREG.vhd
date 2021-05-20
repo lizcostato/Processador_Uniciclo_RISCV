@@ -34,16 +34,15 @@ architecture RTL of XREG is
     
     begin
     
+    r1 <= (others => '0') when r1_address = "00000" else s_XREG(to_integer(unsigned(r1_address)));
+    r2 <= (others => '0') when r2_address = "00000" else s_XREG(to_integer(unsigned(r2_address)));
+    
     Write: process(clock) begin
 	if rising_edge(clock) then
       if we = '1' and to_integer(unsigned(w_address)) /= 0 then
       	s_XREG(to_integer(unsigned(w_address))) <= datain;
       end if;
-      s_XREG(0) <= (others => '0');
     end if;
 	end process;
-    
-    r1 <= s_XREG(to_integer(unsigned(r1_address)));
-    r2 <= s_XREG(to_integer(unsigned(r2_address)));
     
 end RTL;
