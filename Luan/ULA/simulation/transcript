@@ -1,0 +1,116 @@
+# do temp_simlib_comp.tmp
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:27:48 on Apr 27,2021
+# vcom -work cycloneive -93 d:/intelfpga_lite/20.1/quartus/eda/sim_lib/cycloneive_atoms.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package cycloneive_atom_pack
+# -- Compiling package body cycloneive_atom_pack
+# -- Loading package cycloneive_atom_pack
+# -- Compiling package cycloneive_pllpack
+# -- Compiling package body cycloneive_pllpack
+# -- Loading package cycloneive_pllpack
+# -- Loading package cycloneive_atom_pack
+# -- Compiling entity cycloneive_dffe
+# -- Compiling architecture behave of cycloneive_dffe
+# -- Compiling entity cycloneive_mux21
+# -- Compiling architecture AltVITAL of cycloneive_mux21
+# -- Compiling entity cycloneive_mux41
+# -- Compiling architecture AltVITAL of cycloneive_mux41
+# -- Compiling entity cycloneive_and1
+# -- Compiling architecture AltVITAL of cycloneive_and1
+# -- Compiling entity cycloneive_lcell_comb
+# -- Compiling architecture vital_lcell_comb of cycloneive_lcell_comb
+# -- Compiling entity cycloneive_routing_wire
+# ** Warning: d:/intelfpga_lite/20.1/quartus/eda/sim_lib/cycloneive_atoms.vhd(1667): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# (1076.4 section 4.3.2.1.3)
+# -- Compiling architecture behave of cycloneive_routing_wire
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cycloneive_mn_cntr
+# -- Compiling architecture behave of cycloneive_mn_cntr
+# -- Compiling entity cycloneive_scale_cntr
+# -- Compiling architecture behave of cycloneive_scale_cntr
+# -- Compiling entity cycloneive_pll_reg
+# -- Compiling architecture behave of cycloneive_pll_reg
+# -- Loading package cycloneive_pllpack
+# -- Loading entity cycloneive_mn_cntr
+# -- Loading entity cycloneive_scale_cntr
+# -- Loading entity cycloneive_dffe
+# -- Loading entity cycloneive_pll_reg
+# -- Compiling entity cycloneive_pll
+# -- Compiling architecture vital_pll of cycloneive_pll
+# -- Loading entity cycloneive_and1
+# -- Compiling entity cycloneive_ff
+# -- Compiling architecture vital_lcell_ff of cycloneive_ff
+# -- Compiling entity cycloneive_ram_register
+# -- Compiling architecture reg_arch of cycloneive_ram_register
+# -- Compiling entity cycloneive_ram_pulse_generator
+# -- Compiling architecture pgen_arch of cycloneive_ram_pulse_generator
+# -- Loading entity cycloneive_ram_register
+# -- Loading entity cycloneive_ram_pulse_generator
+# -- Compiling entity cycloneive_ram_block
+# -- Compiling architecture block_arch of cycloneive_ram_block
+# -- Compiling entity cycloneive_mac_data_reg
+# -- Compiling architecture vital_cycloneive_mac_data_reg of cycloneive_mac_data_reg
+# -- Compiling entity cycloneive_mac_sign_reg
+# -- Compiling architecture cycloneive_mac_sign_reg of cycloneive_mac_sign_reg
+# -- Compiling entity cycloneive_mac_mult_internal
+# -- Compiling architecture vital_cycloneive_mac_mult_internal of cycloneive_mac_mult_internal
+# -- Loading entity cycloneive_mac_data_reg
+# -- Loading entity cycloneive_mac_sign_reg
+# -- Loading entity cycloneive_mac_mult_internal
+# -- Compiling entity cycloneive_mac_mult
+# -- Compiling architecture vital_cycloneive_mac_mult of cycloneive_mac_mult
+# -- Compiling entity cycloneive_mac_out
+# -- Compiling architecture vital_cycloneive_mac_out of cycloneive_mac_out
+# -- Compiling entity cycloneive_io_ibuf
+# -- Compiling architecture arch of cycloneive_io_ibuf
+# -- Compiling entity cycloneive_io_obuf
+# -- Compiling architecture arch of cycloneive_io_obuf
+# -- Compiling entity cycloneive_ddio_oe
+# -- Compiling architecture arch of cycloneive_ddio_oe
+# -- Compiling entity cycloneive_latch
+# -- Compiling architecture vital_latch of cycloneive_latch
+# -- Compiling entity cycloneive_ddio_out
+# -- Compiling architecture arch of cycloneive_ddio_out
+# -- Compiling entity cycloneive_pseudo_diff_out
+# -- Compiling architecture arch of cycloneive_pseudo_diff_out
+# -- Compiling entity cycloneive_io_pad
+# -- Compiling architecture arch of cycloneive_io_pad
+# -- Compiling entity cycloneive_asmiblock
+# -- Compiling architecture behavior of cycloneive_asmiblock
+# -- Compiling entity cycloneive_ena_reg
+# -- Compiling architecture behave of cycloneive_ena_reg
+# -- Loading entity cycloneive_ena_reg
+# -- Compiling entity cycloneive_clkctrl
+# -- Compiling architecture vital_clkctrl of cycloneive_clkctrl
+# -- Compiling entity cycloneive_rublock
+# -- Compiling architecture architecture_rublock of cycloneive_rublock
+# -- Compiling entity cycloneive_apfcontroller
+# -- Compiling architecture architecture_apfcontroller of cycloneive_apfcontroller
+# -- Compiling entity cycloneive_termination
+# -- Compiling architecture cycloneive_termination_arch of cycloneive_termination
+# -- Compiling entity cycloneive_jtag
+# -- Compiling architecture architecture_jtag of cycloneive_jtag
+# -- Compiling entity cycloneive_crcblock
+# -- Compiling architecture architecture_crcblock of cycloneive_crcblock
+# -- Compiling entity cycloneive_oscillator
+# -- Compiling architecture architecture_oscillator of cycloneive_oscillator
+# End time: 16:27:49 on Apr 27,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:27:49 on Apr 27,2021
+# vcom -work cycloneive -93 d:/intelfpga_lite/20.1/quartus/eda/sim_lib/cycloneive_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Compiling package cycloneive_components
+# End time: 16:27:49 on Apr 27,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

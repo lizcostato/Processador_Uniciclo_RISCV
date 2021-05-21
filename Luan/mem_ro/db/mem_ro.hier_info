@@ -1,0 +1,43 @@
+|mem_ro
+address[0] => mem.RADDR
+address[1] => mem.RADDR1
+address[2] => mem.RADDR2
+address[3] => mem.RADDR3
+address[4] => mem.RADDR4
+address[5] => mem.RADDR5
+address[6] => mem.RADDR6
+address[7] => mem.RADDR7
+dataout[0] <= mem.DATAOUT
+dataout[1] <= mem.DATAOUT1
+dataout[2] <= mem.DATAOUT2
+dataout[3] <= mem.DATAOUT3
+dataout[4] <= mem.DATAOUT4
+dataout[5] <= mem.DATAOUT5
+dataout[6] <= mem.DATAOUT6
+dataout[7] <= mem.DATAOUT7
+dataout[8] <= mem.DATAOUT8
+dataout[9] <= mem.DATAOUT9
+dataout[10] <= mem.DATAOUT10
+dataout[11] <= mem.DATAOUT11
+dataout[12] <= mem.DATAOUT12
+dataout[13] <= mem.DATAOUT13
+dataout[14] <= mem.DATAOUT14
+dataout[15] <= mem.DATAOUT15
+dataout[16] <= mem.DATAOUT16
+dataout[17] <= mem.DATAOUT17
+dataout[18] <= mem.DATAOUT18
+dataout[19] <= mem.DATAOUT19
+dataout[20] <= mem.DATAOUT20
+dataout[21] <= mem.DATAOUT21
+dataout[22] <= mem.DATAOUT22
+dataout[23] <= mem.DATAOUT23
+dataout[24] <= mem.DATAOUT24
+dataout[25] <= mem.DATAOUT25
+dataout[26] <= mem.DATAOUT26
+dataout[27] <= mem.DATAOUT27
+dataout[28] <= mem.DATAOUT28
+dataout[29] <= mem.DATAOUT29
+dataout[30] <= mem.DATAOUT30
+dataout[31] <= mem.DATAOUT31
+
+

@@ -1,0 +1,70 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity ulaRV is
+	generics(WSIZE : natural :=32);
+	port (
+		opcode : in std_logic (3 downto 0)
+		A,B : in std_logic_vector(WSIZE-1 downto 0);
+		Z 	: out std_logic_vector( WSIZE-1 downto 0)
+		zero: out std_logic);
+end ulaRV;
+
+
+architecture ula_arc OF ulaRV is
+
+begin
+
+	process (A,B,opcode)
+	
+		case opcode is
+			
+			when "0000" => Z <= A + B
+			when "0001" => Z <= A - B
+			when "0010" => Z <= A AND B
+			when "0011" => Z <= A OR B
+			when "0100" => Z <= A XOR B
+			when "0101" => Z <= shift_left(unsigned(A), B)
+			when "0110" => Z <= shift_right(unsigned(A),B)
+			when "0111" => Z <= shift_right(A,B)
+			when "1000" => 
+					if  A < B 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+			when "1001" =>  
+					if  unsigned(A) < unsigned(B) 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+			when "1010" =>  
+					if  A >= B 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+			when "1011" =>  
+					if  unsigned(A) >= unsigned(B) 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+			when "1100" =>   
+					if  A == B 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+			when "1101" =>   
+					if  A != B 
+						Z <= 1
+					else
+						Z <= 0
+					end if;
+	
+	end process
+	
+end ula_arc;

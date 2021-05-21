@@ -1,0 +1,102 @@
+# Reading D:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do mem_rv_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/Documentos/Faculdade/OAC/Trab3/mem_rv/mem_rv.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:35 on May 11,2021
+# vcom -reportprogress 300 -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/mem_rv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_rv
+# -- Compiling architecture RTL of mem_rv
+# End time: 16:23:35 on May 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Documentos/Faculdade/OAC/Trab3/mem_rv/testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:35 on May 11,2021
+# vcom -reportprogress 300 -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench
+# -- Compiling architecture Test of testbench
+# End time: 16:23:35 on May 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Test1
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Test1 
+# Start time: 16:23:35 on May 11,2021
+# ** Error: (vsim-3170) Could not find 'Test1'.
+#         Searched libraries:
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/220model
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/sgate
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/altera_lnsim
+#             D:/intelFPGA_lite/18.1/modelsim_ase/altera/vhdl/cyclonev
+#             D:/Documentos/Faculdade/OAC/Trab3/mem_rv/simulation/modelsim/rtl_work
+#             D:/Documentos/Faculdade/OAC/Trab3/mem_rv/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./mem_rv_run_msim_rtl_vhdl.do PAUSED at line 12
+vcom -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/mem_rv.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:41 on May 11,2021
+# vcom -reportprogress 300 -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/mem_rv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_rv
+# -- Compiling architecture RTL of mem_rv
+# End time: 16:23:41 on May 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/testbench.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:41 on May 11,2021
+# vcom -reportprogress 300 -93 -work work D:/Documentos/Faculdade/OAC/Trab3/mem_rv/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity testbench
+# -- Compiling architecture Test of testbench
+# End time: 16:23:41 on May 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 16:23:35 on May 11,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench(test)
+# Loading work.mem_rv(rtl)
+add wave  \
+sim:/testbench/data_in \
+sim:/testbench/clock_in \
+sim:/testbench/we_in \
+sim:/testbench/adress_in \
+sim:/testbench/data_out
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/DUT
+# ** Note: Test done
+#    Time: 5120 ps  Iteration: 0  Instance: /testbench
+run
+# End time: 16:26:32 on May 11,2021, Elapsed time: 0:02:57
+# Errors: 1, Warnings: 1
