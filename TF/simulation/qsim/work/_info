@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Documentos/Faculdade/OAC/Trab3/Uniclico/simulation/qsim
+Emem_rom_rv
+Z1 w1621705836
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+R0
+Z9 8Uniciclo.vho
+Z10 FUniciclo.vho
+l0
+L36
+VPMRBfSPE5jPZT@OCObng90
+!s100 <DMQK1bQTJLD[Aach>0@X1
+Z11 OV;C;10.5b;63
+32
+Z12 !s110 1621705837
+!i10b 1
+Z13 !s108 1621705837.000000
+Z14 !s90 -work|work|Uniciclo.vho|
+Z15 !s107 Uniciclo.vho|
+!i113 1
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 10 mem_rom_rv 0 22 PMRBfSPE5jPZT@OCObng90
+l108
+L86
+VgeMfVf@HL1beZ[l@<]k_;2
+!s100 G0@ngG^A6dI4H;@WZE7g80
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Emem_rom_rv_vhd_vec_tst
+Z18 w1621705834
+R6
+R7
+R0
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L31
+VHWDMoXVOal@QCEU0J^oNk1
+!s100 lE4d7V08V;>8nobWI@TV61
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R16
+R17
+Amem_rom_rv_arch
+R6
+R7
+Z23 DEx4 work 22 mem_rom_rv_vhd_vec_tst 0 22 HWDMoXVOal@QCEU0J^oNk1
+l44
+L33
+Z24 V2ZkC37JhUkN?ZMzi5KQ^11
+Z25 !s100 ef;Y6:ik5lk;Gn@I=PcX:1
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 1
+R16
+R17
+Etop_level
+Z26 w1621701240
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R0
+R9
+R10
+l0
+L36
+VGd]]`S5UGMmMJl_5KMn320
+!s100 OKOHf9cDneE_fRFIZh`j82
+R11
+32
+Z27 !s110 1621701240
+!i10b 1
+Z28 !s108 1621701240.000000
+R14
+R15
+!i113 1
+R16
+R17
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 9 top_level 0 22 Gd]]`S5UGMmMJl_5KMn320
+l242
+L190
+VMIaJ3GOiBEnY`J<FYLann3
+!s100 G8l;I@7e>dVfg0[WOzTH13
+R11
+32
+R27
+!i10b 1
+R28
+R14
+R15
+!i113 1
+R16
+R17
+Etop_level_vhd_vec_tst
+Z29 w1621701238
+R6
+R7
+R0
+R19
+R20
+l0
+L31
+VCnKcalP:F=O<E`bU7H3hA1
+!s100 iQGcISbOlcXc`eIVOEfE03
+R11
+32
+R27
+!i10b 1
+R28
+R21
+R22
+!i113 1
+R16
+R17
+Atop_level_arch
+R6
+R7
+DEx4 work 21 top_level_vhd_vec_tst 0 22 CnKcalP:F=O<E`bU7H3hA1
+l54
+L33
+VY5c`E[?0J8VO6SR=W^0981
+!s100 Ic]S51ZO7E3VDR?MaK1cR0
+R11
+32
+R27
+!i10b 1
+R28
+R21
+R22
+!i113 1
+R16
+R17
