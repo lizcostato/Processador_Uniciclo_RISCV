@@ -154,7 +154,8 @@ package RISCV_Uniciclo_Pkg is
 			aluop : out std_logic_vector(2 downto 0);
 		-- Controle para mux j ----------------------------
 			jlink : out std_logic;
-			isauipc : out std_logic
+			isauipc : out std_logic;
+			islui : out std_logic_vector(4 downto 0)
 			);
 		end component;
 		

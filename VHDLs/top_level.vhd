@@ -71,7 +71,8 @@ architecture rtl of top_level is
 	 signal s_regwrite      : std_logic;
 	 signal s_alusrc        : std_logic;
 	 signal s_isauipc 		: std_logic;
-	 signal s_con_alu         : std_logic_vector(2 downto 0);
+	 signal s_islui			: std_logic_vector(4 downto 0);
+	 signal s_con_alu       : std_logic_vector(2 downto 0);
 	 -- Sinais da ula
 	 signal s_ular1			: std_logic_vector(31 downto 0);
 	 signal s_aluop			: std_logic_vector(3 downto 0);
@@ -113,7 +114,8 @@ architecture rtl of top_level is
 			regwrite => s_regwrite,
 			alusrc => s_alusrc,
 			aluop => s_con_alu,
-			isauipc => s_isauipc
+			isauipc => s_isauipc,
+			islui => s_islui
 		);
 		
 	-- Controle da Ula
@@ -149,7 +151,7 @@ architecture rtl of top_level is
     	port map(
         	clock => clock_in, 
             we => s_regwrite, 
-            r1_address => rs1_field, -- src1, 
+            r1_address => rs1_field and s_islui, 
             r2_address => rs2_field,-- mux_banreg, 
             w_address => rd_field,
             datain => s_datain, -- Mux_dataWrite, 
