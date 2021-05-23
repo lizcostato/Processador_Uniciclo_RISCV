@@ -73,7 +73,7 @@ package RISCV_Uniciclo_Pkg is
     	-- dado leitura 1
       	r1 : out std_logic_vector(31 downto 0);
         -- dado leitura 2
-        r2: out std_logic_vector(31 downto 0)
+        r2: out std_logic_vector(31 downto 0);
  	);
     end component;
     

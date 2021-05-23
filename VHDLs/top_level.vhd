@@ -40,12 +40,12 @@ entity top_level is
 
     -- Output --------------------------------------------------
     	-- so pra testar a ligação
-          intruc_out 		: out std_logic_vector(31 downto 0);
-          r1_address_out	: out std_logic_vector(4 downto 0);
-          r2_address_out	: out std_logic_vector(4 downto 0);
-          immed_out		: out std_logic_vector(31 downto 0);
-          ula_z_out		: out std_logic_vector(31 downto 0);
-          pc_out			: out std_logic_vector(31 downto 0);
+          --intruc_out 		: out std_logic_vector(31 downto 0);
+          --r1_address_out	: out std_logic_vector(4 downto 0);
+          --r2_address_out	: out std_logic_vector(4 downto 0);
+          --immed_out			: out std_logic_vector(31 downto 0);
+          --ula_z_out			: out std_logic_vector(31 downto 0);
+          --pc_out			: out std_logic_vector(31 downto 0);
       	--end_program		: out std_logic;
     );
 end top_level;
@@ -83,14 +83,17 @@ architecture rtl of top_level is
 	 signal s_ulaout        : std_logic_vector(31 downto 0); -- entrada r2 da ula
 	 signal s_immed_r2      : std_logic_vector(31 downto 0);
 	 signal s_branchula     : std_logic;
+     
+     -- Sinal da entrada do BREG
+     signal s_datain		: std_logic_vector(31 downto 0);
 	 
 	 -- Sinais gerador de Imediado
 	 signal s_immed       	: signed(31 downto 0);
 	 
 	 -- Sinais da memoria RAM
-	 signal s_outram 			: std_logic_vector(31 downto 0);
+	 signal s_outram 		: std_logic_vector(31 downto 0);
 	 signal s_ula_ram 		: std_logic_vector(31 downto 0);
-	 
+     
 	 -- saidas de instrução
 	 alias rd_field   		: std_logic_vector(4 downto 0) is s_instruction(11 downto 7);
 	 alias rs1_field  	   : std_logic_vector(4 downto 0) is s_instruction(19 downto 15);
@@ -218,7 +221,7 @@ architecture rtl of top_level is
         a => s_pc_plus4, 
         b => s_reg_aui, 
         sel => s_jlink, 
-        s => s_pcin
+        s => s_datain
       );
 
 
@@ -254,11 +257,12 @@ architecture rtl of top_level is
 
 	
     -- só pro primeiro teste
-    r1_address_out <= rs1_field;
-    r2_address_out <= rs2_field;
-	immed_out <= std_logic_vector(s_immed);
-	intruc_out <= s_instruction;
-    ula_z_out <= s_ulaout;
-    pc_out <= s_pcout;
+    --r1_address_out <= rs1_field;
+    --r2_address_out <= rs2_field;
+	--immed_out <= std_logic_vector(s_immed);
+	--intruc_out <= s_instruction;
+    --ula_z_out <= s_ulaout;
+    --pc_out <= s_pcout;
+    --BREG <= s_BREG;
     
 end rtl;
