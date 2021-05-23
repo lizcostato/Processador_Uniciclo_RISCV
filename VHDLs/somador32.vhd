@@ -25,7 +25,7 @@ architecture RTL of somador_32 is
     
     --process
     --begin
-	dataout <= std_logic_vector(to_unsigned(to_integer(unsigned(data1)) + to_integer(unsigned(data2)), 32));
+	dataout <= std_logic_vector(to_unsigned(to_integer(signed(data1)) + to_integer(signed(data2)), 32));
     --end process;
     
 end RTL;

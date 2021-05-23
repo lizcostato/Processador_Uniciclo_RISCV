@@ -87,9 +87,6 @@ architecture rtl of top_level is
 	 -- Sinais gerador de Imediado
 	 signal s_immed       	: signed(31 downto 0);
 	 
-	 -- Sinais Banco de Registrados
-	 signal s_datain			: std_logic_vector(31 downto 0);
-	 
 	 -- Sinais da memoria RAM
 	 signal s_outram 			: std_logic_vector(31 downto 0);
 	 signal s_ula_ram 		: std_logic_vector(31 downto 0);
@@ -138,7 +135,6 @@ architecture rtl of top_level is
     comp_PC: PC
     	port map(
         	   clock => clock_in, 
-            	we => '1',
             	datain => s_pcin, 
             	dataout => s_pcout
 			);
@@ -166,7 +162,7 @@ architecture rtl of top_level is
             r1_address => rs1_field, -- src1, 
             r2_address => rs2_field,-- mux_banreg, 
             w_address => rd_field,
-            datain => s_datain, -- Mux_dataWrite, 
+            datain => s_ula_ram, -- Mux_dataWrite, 
             r1 => s_ular1, 
             r2 => s_ular2
 			);
@@ -191,70 +187,70 @@ architecture rtl of top_level is
 			);
 			
 		
-		comp_MEM_RV : mem_rv
-		  port map(
-				clock   => clock_in,
-				we      => s_memwrite,
-				address  => s_ulaout(7 downto 0),
-				datain  => s_ular2,
-				dataout => s_outram
-		);
-        
-		-- Saida do Mux da ram para a ula
-	  comp_mux1_ula_RAM: mux2
-    	port map(
-				a =>s_ulaout, 
-				b => s_outram, 
-				sel => s_memreg, 
-				s => s_ula_ram
-			);
-		-- MUX AUIPC
-		comp_mux2_Ram_AUI: mux2
-    	port map(
-				a => s_ula_ram, 
-				b => s_pc_immed, 
-				sel => s_isauipc, 
-				s => s_reg_aui
-			);
-		-- MUX JAL
-		comp_mux2_AUI_JAL: mux2
-    	port map(
-				a => s_reg_aui, 
-				b => s_pc_plus4, 
-				sel => s_jlink, 
-				s => s_pcin
-			);
-        
-        
+    comp_MEM_RV : mem_rv
+      port map(
+        clock   => clock_in,
+        we      => s_memwrite,
+        address  => s_ulaout(7 downto 0),
+        datain  => s_ular2,
+        dataout => s_outram
+      );
+
+    -- Saida do Mux da ram para a ula
+    comp_mux1_ula_RAM: mux2
+      port map(
+        a =>s_ulaout, 
+        b => s_outram, 
+        sel => s_memreg, 
+        s => s_ula_ram
+      );
+    -- MUX AUIPC
+    comp_mux2_Ram_AUI: mux2
+      port map(
+        a => s_ula_ram, 
+        b => s_pc_immed, 
+        sel => s_isauipc, 
+        s => s_reg_aui
+      );
+    -- MUX JAL
+    comp_mux2_AUI_JAL: mux2
+      port map(
+        a => s_pc_plus4, 
+        b => s_reg_aui, 
+        sel => s_jlink, 
+        s => s_pcin
+      );
+
+
     comp_somador_PC: somador_32
-    	port map(
-				data1 => std_logic_vector(to_unsigned(4,32)), 
-           		data2 => s_pcout, 
-            	dataout => s_pc_plus4
-			);
- 
+      port map(
+        data1 => std_logic_vector(to_unsigned(1,32)), 
+        data2 => s_pcout, 
+        dataout => s_pc_plus4
+      );
+
     comp_somador_PC_immed: somador_32
-    	port map(
-				data1 => std_logic_vector(s_immed),
-            	data2 => s_pcout, 
-            	dataout => s_pc_immed
-			);
- 
-		comp_mux_PC_JAL : mux2
-    	port map(
-				a => s_pcout, 
-				b => s_ular1, 
-				sel => s_jlink, 
-				s => s_j_pc
-			);
-			
- 		comp_mux2_PC_IMMED: mux2
-    	port map(
-				a => s_j_pc, 
-				b => s_pc_immed, 
-				sel => s_branch and not(s_branchula), 
-				s => s_pcin
-			);
+      port map(
+        data1 => std_logic_vector(s_immed),
+        data2 => s_j_pc, 
+        dataout => s_pc_immed
+      );
+
+    comp_mux_PC_JAL : mux2
+      port map(
+        a => s_pcout, 
+        b => s_ular1, 
+        sel => s_jlink, 
+        s => s_j_pc
+      );
+
+    comp_mux2_PC_IMMED: mux2
+      port map(
+        a => s_pc_plus4, 
+        b => s_pc_immed, 
+        sel => s_branch and not(s_branchula), 
+        s => s_pcin
+      );
 
 	
     -- só pro primeiro teste

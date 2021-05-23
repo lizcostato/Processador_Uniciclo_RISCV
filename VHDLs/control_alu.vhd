@@ -67,23 +67,23 @@ architecture RTL_ula of control_alu is
 				
 				when others => s_operacao <= "1111";
 				
-				end case;
+			end case;
 		--------------------------------------------------------------------
 		
 		when "001" =>
-		case s_func3 is
-			-- Caso BEQ
-			when "000" => s_operacao <= "1100";
-			-- Caso BNE
-			when "001" => s_operacao <=  "1101";
-			-- Caso BLT
-			when "100" => s_operacao <= "1011";
-			-- Caso BGE
-			when "101" => s_operacao <= "1010";
-			
-			when others => s_operacao <= "1111";
-			
-		end case;
+          case s_func3 is
+              -- Caso BEQ
+              when "000" => s_operacao <= "1100";
+              -- Caso BNE
+              when "001" => s_operacao <=  "1101";
+              -- Caso BLT
+              when "100" => s_operacao <= "1011";
+              -- Caso BGE
+              when "101" => s_operacao <= "1010";
+
+              when others => s_operacao <= "1111";
+
+          end case;
 		
 		-- Operalçao Lui, AUIPC, SW E LW
 		
@@ -91,14 +91,14 @@ architecture RTL_ula of control_alu is
 		
 		when "011" => s_operacao <= "0000"; -- LUI
 		
-		
 		-- outras
-		when others => s_operacao <= "1111";
-					
-      				 
+		when others => s_operacao <= "1111";	 
 			
 	 end case;
+     
 	 end process;
+     
+     operacao <= s_operacao;
     
     
 end RTL_ula;

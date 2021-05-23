@@ -36,7 +36,6 @@ package RISCV_Uniciclo_Pkg is
 	port (
     -- Input ---------------------------------------------------
 		clock : in std_logic;
-      we : in std_logic;
       datain : in std_logic_vector(31 downto 0);
 
     -- Output --------------------------------------------------
