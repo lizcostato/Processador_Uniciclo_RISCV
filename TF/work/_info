@@ -1,0 +1,471 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA_lite/18.1
+Ebanc_reg
+Z0 w1621619652
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/Documentos/Faculdade/OAC/Trab3/Uniclico
+Z5 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd
+Z6 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd
+l0
+L8
+VinF5n12:4]KeeCZe0V?Hf0
+!s100 Fh]o@;NGG69_FGKPPG?J10
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1621742240
+!i10b 1
+Z9 !s108 1621742240.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd|
+Z11 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+DEx4 work 8 banc_reg 0 22 inF5n12:4]KeeCZe0V?Hf0
+l35
+L31
+VAkJI;Ld>NfAPQLEoF;0_z0
+!s100 Ji;5jaVYD8O8W1h6`W`mC3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrol_alu
+Z14 w1621630649
+R1
+R2
+R3
+R4
+Z15 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd
+Z16 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd
+l0
+L8
+Vj42IVPn43EPL?::?khhDc1
+!s100 cA33=4C99[KTBGlaFbF<>0
+R7
+32
+Z17 !s110 1621742241
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd|
+Z19 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd|
+!i113 1
+R12
+R13
+Artl_ula
+R1
+R2
+R3
+DEx4 work 11 control_alu 0 22 j42IVPn43EPL?::?khhDc1
+l29
+L22
+V[EWV6l2mD6DOEf8ZP71mk1
+!s100 :<@TAd@IPX8>3jb]]LgER1
+R7
+32
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Econtrolador
+Z20 w1621738762
+R1
+R2
+R3
+R4
+Z21 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd
+Z22 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd
+l0
+L8
+V6?]CbYFTZV;CmR^8<DoWl1
+!s100 YMD`9AhhUV2mXgA4lbGK22
+R7
+32
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd|
+Z24 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 11 controlador 0 22 6?]CbYFTZV;CmR^8<DoWl1
+l35
+L31
+V4jG7nMDS26Zff5;mh12S[2
+!s100 =Dl3LJQ]`8zTb<e367noh0
+R7
+32
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Egenimm32
+Z25 w1621619132
+R1
+R2
+R3
+R4
+Z26 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd
+Z27 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd
+l0
+L33
+V<i7=_05>kSe]c_PZPe__Z3
+!s100 UX3HY=1Se^5Pf4]@mSifB3
+R7
+32
+R17
+!i10b 1
+Z28 !s108 1621742241.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd|
+Z30 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd|
+!i113 1
+R12
+R13
+Agenimm32_op
+R1
+R2
+R3
+DEx4 work 8 genimm32 0 22 <i7=_05>kSe]c_PZPe__Z3
+l59
+L48
+V;WCE=5>ASfeRolnT8<66b1
+!s100 D9>H8YJbgKFAF?]CNg=fA1
+R7
+32
+R17
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Emem_rom_rv
+Z31 w1621705752
+Z32 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z33 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd
+Z34 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd
+l0
+L7
+Vg31YZ7i5P^U@5W]Rh`S2M3
+!s100 T6lil>JMhk`dYAiAYT1]92
+R7
+32
+Z35 !s110 1621742517
+!i10b 1
+Z36 !s108 1621742517.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd|
+Z38 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd|
+!i113 1
+R12
+R13
+Artl
+R32
+R1
+R2
+R3
+Z39 DEx4 work 10 mem_rom_rv 0 22 g31YZ7i5P^U@5W]Rh`S2M3
+l40
+L16
+Z40 VkQTmiTjaKhFZ=[:dY[XXS2
+Z41 !s100 FS?=9z:?WV9KI^n83:Njc1
+R7
+32
+R35
+!i10b 1
+R36
+R37
+R38
+!i113 1
+R12
+R13
+Emem_rv
+Z42 w1620761732
+R1
+R2
+R3
+R4
+Z43 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd
+Z44 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd
+l0
+L6
+V4eNHITm[I@iS=]<UkTMED3
+!s100 lWVD=]XMMEen;DOifXk`13
+R7
+32
+R17
+!i10b 1
+R28
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd|
+Z46 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 6 mem_rv 0 22 4eNHITm[I@iS=]<UkTMED3
+l24
+L19
+V[9Id7XdhW5lcn]4XNzMk_2
+!s100 DXh3I:KNei]`j7B?^Azl21
+R7
+32
+R17
+!i10b 1
+R28
+R45
+R46
+!i113 1
+R12
+R13
+Emux2
+Z47 w1621621248
+R2
+R3
+R4
+Z48 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd
+Z49 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd
+l0
+L4
+Vn7_]ID^ojEklZFJgLclFF2
+!s100 ^e9zN6G4fmFGn57<A9LU33
+R7
+32
+R17
+!i10b 1
+R28
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd|
+Z51 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd|
+!i113 1
+R12
+R13
+Acomportamental
+R2
+R3
+DEx4 work 4 mux2 0 22 n7_]ID^ojEklZFJgLclFF2
+l12
+L10
+VmIeNlle<S=UZ=DDfzhWM=1
+!s100 4oO0afT4Mh_[HBk];G8N00
+R7
+32
+R17
+!i10b 1
+R28
+R50
+R51
+!i113 1
+R12
+R13
+Epc
+Z52 w1621619952
+R1
+R2
+R3
+R4
+Z53 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd
+Z54 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd
+l0
+L8
+V332gdgo>i[HeH`lkO:Tkm1
+!s100 dc[@T5c[3=de>eV33O_@Q3
+R7
+32
+R17
+!i10b 1
+R28
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd|
+Z56 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 332gdgo>i[HeH`lkO:Tkm1
+l22
+L20
+VNIZ4fM0gE_UQYaO6;5ofS1
+!s100 :91?eA<koK@]zh<h@AN7U1
+R7
+32
+R17
+!i10b 1
+R28
+R55
+R56
+!i113 1
+R12
+R13
+Priscv_uniciclo_pkg
+R1
+R2
+R3
+w1621740291
+R4
+8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd
+FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd
+l0
+L33
+V6iC4LfYSHj0zOfh4mRhO10
+!s100 ZB_B1BDe?Ek3YdBR6;`:O1
+R7
+32
+Z57 !s110 1621742242
+!i10b 1
+Z58 !s108 1621742242.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd|
+!s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd|
+!i113 1
+R12
+R13
+Esomador_32
+Z59 w1621620038
+R1
+R2
+R3
+R4
+Z60 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd
+Z61 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd
+l0
+L8
+VQ1^F:TU@IF1AmYaFX`RI@3
+!s100 :PGab5f9c9nLFe`^30`UE1
+R7
+32
+R57
+!i10b 1
+R58
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd|
+Z63 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 10 somador_32 0 22 Q1^F:TU@IF1AmYaFX`RI@3
+l23
+L19
+V0B_Gj^5H_DQnQAjYmWcWz3
+!s100 AeF]H1PJHheaWz^eBCXGJ2
+R7
+32
+R57
+!i10b 1
+R58
+R62
+R63
+!i113 1
+R12
+R13
+Etop_level
+w1621740910
+DPx4 work 18 riscv_uniciclo_pkg 0 22 6iC4LfYSHj0zOfh4mRhO10
+Z64 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z65 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R1
+R2
+R3
+R4
+8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd
+FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd
+l0
+L36
+VGWXlO4J]z5WIZz<0<dm`h1
+!s100 b<FoZYT1BJL2H?kj2dZaO2
+R7
+32
+R57
+!i10b 1
+R58
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd|
+!s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd|
+!i113 1
+R12
+R13
+Eularv
+Z66 w1621698279
+R64
+R65
+R1
+R2
+R3
+R4
+Z67 8D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd
+Z68 FD:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd
+l0
+L6
+VP=6a_Nc`=3<8T5V?9g@6H1
+!s100 ocRZ5OP;5jUz0GfM_KLCe1
+R7
+32
+R8
+!i10b 1
+R9
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd|
+Z70 !s107 D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd|
+!i113 1
+R12
+R13
+Aula_arc
+R64
+R65
+R1
+R2
+R3
+DEx4 work 5 ularv 0 22 P=6a_Nc`=3<8T5V?9g@6H1
+l18
+L16
+VM9=W_XF9WAVK]X^z^ULUi2
+!s100 AziOhCB@>L_5:i40i@L``3
+R7
+32
+R8
+!i10b 1
+R9
+R69
+R70
+!i113 1
+R12
+R13

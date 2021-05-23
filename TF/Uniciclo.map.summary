@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat May 22 14:49:26 2021
+Analysis & Synthesis Status : Successful - Sun May 23 01:15:57 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Uniciclo
-Top-level Entity Name : mem_ROM_rv
+Top-level Entity Name : top_level
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 40
+Total pins : 75
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

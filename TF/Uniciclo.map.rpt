@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Uniciclo
-Sat May 22 14:49:26 2021
+Sun May 23 01:15:57 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Registers Packed Into Inferred Megafunctions
+ 11. Source assignments for mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated
+ 12. Parameter Settings for Inferred Entity Instance: mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Port Connectivity Checks: "somador_32:comp_somador_PC_immed"
+ 15. Port Connectivity Checks: "somador_32:comp_somador_PC"
+ 16. Port Connectivity Checks: "PC:comp_PC"
+ 17. Port Connectivity Checks: "controlador:contr_uni"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -42,14 +51,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 22 14:49:26 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 23 01:15:57 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Uniciclo                                    ;
-; Top-level Entity Name           ; mem_ROM_rv                                  ;
+; Top-level Entity Name           ; top_level                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 40                                          ;
+; Total pins                      ; 75                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +77,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; mem_ROM_rv         ; Uniciclo           ;
+; Top-level entity name                                                           ; top_level          ; Uniciclo           ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -165,40 +174,60 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; mem_ro.vhd                       ; yes             ; User VHDL File  ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; RISCV_Uniciclo_Pkg.vhd           ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd            ;         ;
+; control_alu.vhd                  ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd                   ;         ;
+; control.vhd                      ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd                       ;         ;
+; ularv.vhd                        ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd                         ;         ;
+; somador32.vhd                    ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd                     ;         ;
+; PC.vhd                           ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd                            ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd                          ;         ;
+; mem_rv.vhd                       ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd                        ;         ;
+; mem_ro.vhd                       ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd                        ;         ;
+; banc_reg.vhd                     ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd                      ;         ;
+; top_level.vhd                    ; yes             ; User VHDL File               ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd                     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_fm91.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf            ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                 ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 0                 ;
-;     -- 7 input functions                    ; 0                 ;
-;     -- 6 input functions                    ; 0                 ;
-;     -- 5 input functions                    ; 0                 ;
-;     -- 4 input functions                    ; 0                 ;
-;     -- <=3 input functions                  ; 0                 ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 40                ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; dataout[0]~output ;
-; Maximum fan-out                             ; 1                 ;
-; Total fan-out                               ; 40                ;
-; Average fan-out                             ; 0.50              ;
-+---------------------------------------------+-------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 0                   ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 0                   ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 0                   ;
+;     -- 5 input functions                    ; 0                   ;
+;     -- 4 input functions                    ; 0                   ;
+;     -- <=3 input functions                  ; 0                   ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 75                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; immed_out[0]~output ;
+; Maximum fan-out                             ; 1                   ;
+; Total fan-out                               ; 75                  ;
+; Average fan-out                             ; 0.50                ;
++---------------------------------------------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,9 +235,19 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mem_ROM_rv                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 40   ; 0            ; |mem_ROM_rv         ; mem_ROM_rv  ; work         ;
+; |top_level                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 75   ; 0            ; |top_level          ; top_level   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; PC:comp_PC|dataout[0..30]              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 31 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -226,6 +265,144 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                ;
++---------------------------------------+------------------------------+------+
+; Register Name                         ; Megafunction                 ; Type ;
++---------------------------------------+------------------------------+------+
+; mem_rv:comp_MEM_RV|read_address[0..7] ; mem_rv:comp_MEM_RV|mem_rtl_0 ; RAM  ;
++---------------------------------------+------------------------------+------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                      ;
+; WIDTH_A                            ; 32                   ; Untyped                      ;
+; WIDTHAD_A                          ; 8                    ; Untyped                      ;
+; NUMWORDS_A                         ; 256                  ; Untyped                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_fm91      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                             ;
+;     -- WIDTH_A                            ; 32                                      ;
+;     -- NUMWORDS_A                         ; 256                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "somador_32:comp_somador_PC_immed" ;
++----------+-------+----------+--------------------------------+
+; Port     ; Type  ; Severity ; Details                        ;
++----------+-------+----------+--------------------------------+
+; data1[0] ; Input ; Info     ; Stuck at GND                   ;
++----------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "somador_32:comp_somador_PC" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; data1[31..3] ; Input ; Info     ; Stuck at GND         ;
+; data1[1..0]  ; Input ; Info     ; Stuck at GND         ;
+; data1[2]     ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "PC:comp_PC" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; we   ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controlador:contr_uni"                                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; memread ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jlink   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -234,7 +411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 40                          ;
+; boundary_port         ; 75                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -256,7 +433,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 22 14:49:14 2021
+    Info: Processing started: Sun May 23 01:15:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Uniciclo -c Uniciclo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -266,14 +443,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
     Info (12022): Found design unit 1: control_alu-RTL_ula File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd Line: 22
     Info (12023): Found entity 1: control_alu File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: controlador-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 26
+    Info (12022): Found design unit 1: controlador-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 31
     Info (12023): Found entity 1: controlador File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file ularv.vhd
     Info (12022): Found design unit 1: ulaRV-ula_arc File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd Line: 16
     Info (12023): Found entity 1: ulaRV File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somador32.vhd
-    Info (12022): Found design unit 1: somador_32-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd Line: 19
-    Info (12023): Found entity 1: somador_32 File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd Line: 8
+    Info (12022): Found design unit 1: somador_32-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd Line: 20
+    Info (12023): Found entity 1: somador_32 File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: PC-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd Line: 20
     Info (12023): Found entity 1: PC File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd Line: 8
@@ -293,62 +470,172 @@ Info (12021): Found 2 design units, including 1 entities, in source file banc_re
     Info (12022): Found design unit 1: banc_reg-RTL File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd Line: 31
     Info (12023): Found entity 1: banc_reg File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-rtl File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 53
-    Info (12023): Found entity 1: top_level File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 35
-Info (12127): Elaborating entity "mem_ROM_rv" for the top level hierarchy
+    Info (12022): Found design unit 1: top_level-rtl File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 51
+    Info (12023): Found entity 1: top_level File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 36
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top_level.vhd(67): object "s_memread" assigned a value but never read File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 67
+Warning (10541): VHDL Signal Declaration warning at top_level.vhd(69): used implicit default value for signal "s_jlink" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 69
+Warning (10541): VHDL Signal Declaration warning at top_level.vhd(83): used implicit default value for signal "s_immed" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 83
+Info (12128): Elaborating entity "controlador" for hierarchy "controlador:contr_uni" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 104
+Warning (10631): VHDL Process Statement warning at control.vhd(39): inferring latch(es) for signal or variable "isauipc", which holds its previous value in one or more paths through the process File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 39
+Info (10041): Inferred latch for "isauipc" at control.vhd(39) File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 39
+Info (12128): Elaborating entity "control_alu" for hierarchy "control_alu:controle_alu" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 120
+Warning (10541): VHDL Signal Declaration warning at control_alu.vhd(17): used implicit default value for signal "operacao" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at control_alu.vhd(27): object "s_operacao" assigned a value but never read File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd Line: 27
+Info (12128): Elaborating entity "PC" for hierarchy "PC:comp_PC" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 131
+Info (12128): Elaborating entity "mem_ROM_rv" for hierarchy "mem_ROM_rv:comp_ROM" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 140
+Info (12128): Elaborating entity "banc_reg" for hierarchy "banc_reg:comp_XREG" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 148
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:comp_mux2_imm_ula" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 161
+Info (12128): Elaborating entity "ulaRV" for hierarchy "ulaRV:comp_ULA" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 170
+Info (12128): Elaborating entity "mem_rv" for hierarchy "mem_rv:comp_MEM_RV" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 180
+Info (12128): Elaborating entity "somador_32" for hierarchy "somador_32:comp_somador_PC" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 215
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "mem" is uninferred due to asynchronous read logic File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 38
+    Info (276007): RAM logic "banc_reg:comp_XREG|s_XREG" is uninferred due to asynchronous read logic File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd Line: 33
+Warning (14025): LATCH primitive "controlador:contr_uni|isauipc" is permanently disabled File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd Line: 25
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "mem_rv:comp_MEM_RV|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fm91.tdf
+    Info (12023): Found entity 1: altsyncram_fm91 File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 27
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a0" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 35
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a1" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 56
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a2" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 77
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a3" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 98
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a4" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 119
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a5" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 140
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a6" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 161
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a7" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 182
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a8" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 203
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a9" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 224
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a10" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 245
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a11" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 266
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a12" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 287
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a13" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 308
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a14" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 329
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a15" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 350
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a16" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 371
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a17" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 392
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a18" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 413
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a19" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 434
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a20" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 455
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a21" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 476
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a22" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 497
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a23" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 518
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a24" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 539
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a25" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 560
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a26" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 581
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a27" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 602
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a28" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 623
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a29" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 644
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a30" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 665
+        Warning (14320): Synthesized away node "mem_rv:comp_MEM_RV|altsyncram:mem_rtl_0|altsyncram_fm91:auto_generated|ram_block1a31" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/db/altsyncram_fm91.tdf Line: 686
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "dataout[0]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[1]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[2]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[3]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[4]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[5]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[6]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[7]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[8]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[9]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[10]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[11]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[12]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[13]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[14]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[15]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[16]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[17]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[18]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[19]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[20]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[21]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[22]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[23]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[24]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[25]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[26]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[27]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[28]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[29]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[30]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
-    Warning (13410): Pin "dataout[31]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 11
+    Warning (13410): Pin "immed_out[0]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[1]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[2]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[3]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[4]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[5]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[6]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[7]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[8]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[9]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[10]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[11]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[12]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[13]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[14]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[15]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[16]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[17]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[18]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[19]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[20]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[21]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[22]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[23]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[24]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[25]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[26]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[27]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[28]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[29]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[30]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "immed_out[31]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 43
+    Warning (13410): Pin "r1_address_out[0]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 44
+    Warning (13410): Pin "r1_address_out[1]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 44
+    Warning (13410): Pin "r1_address_out[2]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 44
+    Warning (13410): Pin "r1_address_out[3]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 44
+    Warning (13410): Pin "r1_address_out[4]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 44
+    Warning (13410): Pin "r2_address_out[0]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 45
+    Warning (13410): Pin "r2_address_out[1]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 45
+    Warning (13410): Pin "r2_address_out[2]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 45
+    Warning (13410): Pin "r2_address_out[3]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 45
+    Warning (13410): Pin "r2_address_out[4]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 45
+    Warning (13410): Pin "intruc_out[0]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[1]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[2]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[3]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[4]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[5]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[6]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[7]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[8]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[9]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[10]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[11]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[12]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[13]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[14]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[15]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[16]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[17]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[18]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[19]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[20]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[21]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[22]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[23]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[24]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[25]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[26]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[27]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[28]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[29]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[30]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
+    Warning (13410): Pin "intruc_out[31]" is stuck at GND File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 46
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "address[0]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[1]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[2]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[3]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[4]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[5]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[6]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[7]" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd Line: 10
-Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4847 megabytes
-    Info: Processing ended: Sat May 22 14:49:26 2021
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock_in" File: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd Line: 39
+Info (21057): Implemented 75 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 74 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 4863 megabytes
+    Info: Processing ended: Sun May 23 01:15:57 2021
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:27
 
 

@@ -1,0 +1,116 @@
+D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/banc_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity banc_reg
+-- Compiling architecture RTL of banc_reg
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/ularv.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ulaRV
+-- Compiling architecture ula_arc of ulaRV
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control_alu.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity control_alu
+-- Compiling architecture RTL_ula of control_alu
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/somador32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity somador_32
+-- Compiling architecture RTL of somador_32
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package RISCV_Uniciclo_Pkg
+-- Compiling entity top_level
+-- Compiling architecture rtl of top_level
+** Error: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd(224): (vcom-1436) Actual expression (type conversion (to ieee.std_logic_1164.STD_LOGIC_VECTOR)) of formal "data1" is not globally static.
+** Error: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd(241): (vcom-1436) Actual expression (infix expression) of formal "sel" is not globally static.
+** Error: D:/Documentos/Faculdade/OAC/Trab3/Uniclico/top_level.vhd(254): VHDL Compiler exiting
+
+} {12.0 15.0} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/PC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC
+-- Compiling architecture RTL of PC
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mux2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2
+-- Compiling architecture comportamental of mux2
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_rv.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mem_rv
+-- Compiling architecture RTL of mem_rv
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/control.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controlador
+-- Compiling architecture RTL of controlador
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/genImm32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity genImm32
+-- Compiling architecture genImm32_op of genImm32
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/RISCV_Uniciclo_Pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package RISCV_Uniciclo_Pkg
+
+} {} {}} D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Documentos/Faculdade/OAC/Trab3/Uniclico/mem_ro.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity mem_ROM_rv
+-- Compiling architecture RTL of mem_ROM_rv
+
+} {} {}}
