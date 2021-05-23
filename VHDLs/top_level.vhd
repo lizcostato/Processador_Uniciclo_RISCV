@@ -236,7 +236,7 @@ architecture rtl of top_level is
     comp_somador_PC_immed: somador_32
     	port map(
 				data1 => std_logic_vector(s_immed),
-            	data2 => s_pcout, 
+            	data2 => s_j_pc, 
             	dataout => s_pc_immed
 			);
  
@@ -250,7 +250,7 @@ architecture rtl of top_level is
 			
  		comp_mux2_PC_IMMED: mux2
     	port map(
-				a => s_j_pc, 
+				a => s_pc_plus4, 
 				b => s_pc_immed, 
 				sel => s_branch and not(s_branchula), 
 				s => s_pcin
