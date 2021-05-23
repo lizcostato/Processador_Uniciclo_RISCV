@@ -115,7 +115,8 @@ architecture rtl of top_level is
 			alusrc => s_alusrc,
 			aluop => s_con_alu,
 			isauipc => s_isauipc,
-			islui => s_islui
+			islui => s_islui,
+			jlink => s_jlink
 		);
 		
 	-- Controle da Ula
