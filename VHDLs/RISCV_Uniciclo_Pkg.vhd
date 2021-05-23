@@ -1,4 +1,4 @@
---! @file      genImm32.vhd
+ --! @file      genImm32.vhd
 --!
 --! @brief     pakage of the uniciclo RISCV
 --! @details   It has all the constants and components used in the uniciclo RISCV
@@ -89,20 +89,16 @@ package RISCV_Uniciclo_Pkg is
 		  );
     end component;
     
-    component mem_RAM_rv is
+	component genImm32 is
     port (
-    -- Input ---------------------------------------------------
-		clock : in std_logic;
-		we : in std_logic;		
-		
-		address  : in std_logic_vector(7 downto 0);
-		    -- Output --------------------------------------------------
-		datain  : in std_logic_vector(31 downto 0);
-		dataout : out std_logic_vector(31 downto 0)
+        -- Input ---------------------------------------------------
+        instr       :   in std_logic_vector(31 downto 0);
 
- 	);
-    end component;
-    
+        -- Output --------------------------------------------------
+		imm32	:	out signed(31 downto 0)
+    );
+	end component;
+	
     component somador_32 is
     port (
     -- Input ---------------------------------------------------
@@ -154,7 +150,8 @@ package RISCV_Uniciclo_Pkg is
 			aluop : out std_logic_vector(2 downto 0);
 		-- Controle para mux j ----------------------------
 			jlink : out std_logic;
-			isauipc : out std_logic
+			isauipc : out std_logic;
+			islui : out std_logic_vector(4 downto 0)
 			);
 		end component;
 		

@@ -89,7 +89,10 @@ architecture RTL_ula of control_alu is
 		
 		when "010" => s_operacao <= "0000";
 		
-		-- Operacação SW
+		when "011" => s_operacao <= "0000"; -- LUI
+		
+		
+		-- outras
 		when others => s_operacao <= "1111";
 					
       				 

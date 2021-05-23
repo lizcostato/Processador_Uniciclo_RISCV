@@ -39,11 +39,13 @@ entity top_level is
 		  clock_in		: in std_logic;
 
     -- Output --------------------------------------------------
-    	-- so pra testar a primeira ligação
-        immed_out			: out std_logic_vector(31 downto 0);
-        r1_address_out	: out std_logic_vector(4 downto 0);
-        r2_address_out	: out std_logic_vector(4 downto 0);
-		  intruc_out : out std_logic_vector(31 downto 0)
+    	-- so pra testar a ligação
+          intruc_out 		: out std_logic_vector(31 downto 0);
+          r1_address_out	: out std_logic_vector(4 downto 0);
+          r2_address_out	: out std_logic_vector(4 downto 0);
+          immed_out		: out std_logic_vector(31 downto 0);
+          ula_z_out		: out std_logic_vector(31 downto 0);
+          pc_out			: out std_logic_vector(31 downto 0);
       	--end_program		: out std_logic;
     );
 end top_level;
@@ -54,7 +56,7 @@ architecture rtl of top_level is
 	
 	-- sinais que vão ser necessários entre os blocos
 	 signal s_pcin 			: std_logic_vector(31 downto 0);
-    signal s_pcout			: std_logic_vector(31 downto 0);
+    signal s_pcout			: std_logic_vector(31 downto 0) := (others => '0');
 	 signal s_pc_plus4		: std_logic_vector(31 downto 0);
 	 signal s_pc_immed      : std_logic_vector(31 downto 0);
 	 signal s_reg_aui			: std_logic_vector(31 downto 0);
@@ -71,7 +73,9 @@ architecture rtl of top_level is
 	 signal s_regwrite      : std_logic;
 	 signal s_alusrc        : std_logic;
 	 signal s_isauipc 		: std_logic;
+     signal s_islui			: std_logic_vector(4 downto 0);
 	 signal s_con_alu         : std_logic_vector(2 downto 0);
+	 
 	 -- Sinais da ula
 	 signal s_ular1			: std_logic_vector(31 downto 0);
 	 signal s_aluop			: std_logic_vector(3 downto 0);
@@ -79,8 +83,9 @@ architecture rtl of top_level is
 	 signal s_ulaout        : std_logic_vector(31 downto 0); -- entrada r2 da ula
 	 signal s_immed_r2      : std_logic_vector(31 downto 0);
 	 signal s_branchula     : std_logic;
+	 
 	 -- Sinais gerador de Imediado
-	 signal s_immed       	: std_logic_vector(31 downto 0);
+	 signal s_immed       	: signed(31 downto 0);
 	 
 	 -- Sinais Banco de Registrados
 	 signal s_datain			: std_logic_vector(31 downto 0);
@@ -113,7 +118,9 @@ architecture rtl of top_level is
 			regwrite => s_regwrite,
 			alusrc => s_alusrc,
 			aluop => s_con_alu,
-			isauipc => s_isauipc
+			isauipc => s_isauipc,
+            islui => s_islui,
+			jlink => s_jlink
 		);
 		
 	-- Controle da Ula
@@ -131,12 +138,12 @@ architecture rtl of top_level is
     comp_PC: PC
     	port map(
         	   clock => clock_in, 
-            we => '1',
-            datain => s_pcin, 
-            dataout => s_pcout
+            	we => '1',
+            	datain => s_pcin, 
+            	dataout => s_pcout
 			);
 	
-    -- Instruction Memory
+    -- Instruction Memory ---------------------------------------
     comp_ROM: mem_ROM_rv
     	port map(
         	-- o tamanho do s_pcout aqui depende da quantidade de linhas da ROM
@@ -144,6 +151,13 @@ architecture rtl of top_level is
 				dataout => s_instruction
 			);
 			
+    -- Immediate Generator ---------------------------------------            
+    comp_genImm32: genImm32 
+      port map(
+          instr		=> s_instruction,
+          imm32		=> s_immed
+      	);
+            
     -- Banco de Registradores ------------------------------------
     comp_XREG: banc_reg
     	port map(
@@ -161,9 +175,9 @@ architecture rtl of top_level is
 	 comp_mux2_imm_ula: mux2  -- Mux ula
     	port map(
 			a => s_ular2, 
-			b => s_immed, 
+			b => std_logic_vector(s_immed), 
 			sel => s_alusrc, 
-			s =>s_immed_r2
+			s => s_immed_r2
 		);
 		
      -- ULA E MUX de controle --------------------------------------
@@ -208,22 +222,22 @@ architecture rtl of top_level is
 				a => s_reg_aui, 
 				b => s_pc_plus4, 
 				sel => s_jlink, 
-				s => s_datain
+				s => s_pcin
 			);
         
         
     comp_somador_PC: somador_32
     	port map(
 				data1 => std_logic_vector(to_unsigned(4,32)), 
-            data2 => s_pcout, 
-            dataout => s_pc_plus4
+           		data2 => s_pcout, 
+            	dataout => s_pc_plus4
 			);
  
     comp_somador_PC_immed: somador_32
     	port map(
-				data1 => std_logic_vector(shift_left(unsigned(s_immed), 1)),
-            data2 => s_pcout, 
-            dataout => s_pc_immed
+				data1 => std_logic_vector(s_immed),
+            	data2 => s_pcout, 
+            	dataout => s_pc_immed
 			);
  
 		comp_mux_PC_JAL : mux2
@@ -241,14 +255,14 @@ architecture rtl of top_level is
 				sel => s_branch and not(s_branchula), 
 				s => s_pcin
 			);
-			
-
 
 	
     -- só pro primeiro teste
-    r1_address_out <= rd_field;
-    r2_address_out <= rs1_field;
-	 immed_out <= s_immed;
-	 intruc_out <= s_instruction;
+    r1_address_out <= rs1_field;
+    r2_address_out <= rs2_field;
+	immed_out <= std_logic_vector(s_immed);
+	intruc_out <= s_instruction;
+    ula_z_out <= s_ulaout;
+    pc_out <= s_pcout;
     
 end rtl;
