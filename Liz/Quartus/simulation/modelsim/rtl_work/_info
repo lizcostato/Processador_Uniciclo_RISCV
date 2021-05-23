@@ -1,0 +1,477 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/simulation/modelsim
+Ebanc_reg
+Z1 w1621789536
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd
+Z6 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd
+l0
+L8
+VISIHh1boGCBO_]^ZOj3F50
+!s100 Fh]o@;NGG69_FGKPPG?J10
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1621793626
+!i10b 1
+Z9 !s108 1621793626.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd|
+Z11 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 8 banc_reg 0 22 ISIHh1boGCBO_]^ZOj3F50
+l35
+L31
+V:IEM@E]^_8jdl_baRJGf42
+!s100 Ji;5jaVYD8O8W1h6`W`mC3
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrol_alu
+Z14 w1621789453
+R2
+R3
+R4
+R0
+Z15 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd
+Z16 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd
+l0
+L8
+V]zC:2Oi9C4]aF_@gC:SC_3
+!s100 cA33=4C99[KTBGlaFbF<>0
+R7
+33
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd|
+Z18 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd|
+!i113 1
+R12
+R13
+Artl_ula
+R2
+R3
+R4
+DEx4 work 11 control_alu 0 22 ]zC:2Oi9C4]aF_@gC:SC_3
+l29
+L22
+Vfj@jW57N54kR9l<cS@gLf3
+!s100 4iC[ZzmQU]YAET@cjY<8C2
+R7
+33
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Econtrolador
+Z19 w1621789544
+R2
+R3
+R4
+R0
+Z20 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd
+Z21 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd
+l0
+L8
+VCnz^3MU8]MKCV968]P4<l0
+!s100 _FRWj0YRl[`@gmF9CIMl70
+R7
+33
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd|
+Z23 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 11 controlador 0 22 Cnz^3MU8]MKCV968]P4<l0
+l37
+L33
+V[R6z6Rj=53Pgj;ET?fe^_3
+!s100 gnFfDaG_2b4:HXkJP^Ban2
+R7
+33
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Egenimm32
+Z24 w1621789470
+R2
+R3
+R4
+R0
+Z25 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd
+Z26 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd
+l0
+L33
+VRdT_oUJL>HkeR^e0>1zSL1
+!s100 UX3HY=1Se^5Pf4]@mSifB3
+R7
+33
+R8
+!i10b 1
+R9
+Z27 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd|
+Z28 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd|
+!i113 1
+R12
+R13
+Agenimm32_op
+R2
+R3
+R4
+DEx4 work 8 genimm32 0 22 RdT_oUJL>HkeR^e0>1zSL1
+l59
+L48
+V^TR;HUk<YjJ]QXI]oRH1h3
+!s100 D9>H8YJbgKFAF?]CNg=fA1
+R7
+33
+R8
+!i10b 1
+R9
+R27
+R28
+!i113 1
+R12
+R13
+Emem_rom_rv
+w1621792689
+Z29 DPx4 work 18 riscv_uniciclo_pkg 0 22 W8oCfH;k5kHQf5^TbQ^Gn0
+R2
+R3
+R4
+R0
+8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd
+FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd
+l0
+L10
+VUP^Cz;jY2k7=:1aR14mg23
+!s100 =BVUcV?n8m6Dn6z_7aiP?2
+R7
+33
+Z30 !s110 1621793627
+!i10b 1
+!s108 1621793627.000000
+!s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd|
+!s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd|
+!i113 1
+R12
+R13
+Emem_rv
+Z31 w1621789486
+R2
+R3
+R4
+R0
+Z32 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd
+Z33 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd
+l0
+L6
+V08Ee`JHGNHM<b]n=9W8ZU1
+!s100 lWVD=]XMMEen;DOifXk`13
+R7
+33
+R8
+!i10b 1
+Z34 !s108 1621793625.000000
+Z35 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd|
+Z36 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 6 mem_rv 0 22 08Ee`JHGNHM<b]n=9W8ZU1
+l24
+L19
+V3aQOYIgEd>KkN:0o8:>702
+!s100 DXh3I:KNei]`j7B?^Azl21
+R7
+33
+R8
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R12
+R13
+Emux2
+Z37 w1621789493
+R3
+R4
+R0
+Z38 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd
+Z39 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd
+l0
+L4
+VHPDz5:PASo^k1R`z2X=[Z3
+!s100 ^e9zN6G4fmFGn57<A9LU33
+R7
+33
+Z40 !s110 1621793625
+!i10b 1
+R34
+Z41 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd|
+Z42 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd|
+!i113 1
+R12
+R13
+Acomportamental
+R3
+R4
+DEx4 work 4 mux2 0 22 HPDz5:PASo^k1R`z2X=[Z3
+l12
+L10
+V>Q=Tb@@o^[mF07NTYVX383
+!s100 4oO0afT4Mh_[HBk];G8N00
+R7
+33
+R40
+!i10b 1
+R34
+R41
+R42
+!i113 1
+R12
+R13
+Epc
+Z43 w1621789502
+R2
+R3
+R4
+R0
+Z44 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd
+Z45 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd
+l0
+L8
+VE0N4OzMX5F8imP>N`lK4I3
+!s100 IJS;VfZXYjS99WlPbEMh`3
+R7
+33
+R40
+!i10b 1
+R34
+Z46 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd|
+Z47 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 2 pc 0 22 E0N4OzMX5F8imP>N`lK4I3
+l21
+L19
+VQf@zaJF6O2zjRmRBA[D<E1
+!s100 Xe@e^OCm@m>lD5aWRWa:R0
+R7
+33
+R40
+!i10b 1
+R34
+R46
+R47
+!i113 1
+R12
+R13
+Priscv_uniciclo_pkg
+R2
+R3
+R4
+w1621792687
+R0
+8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd
+FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd
+l0
+L33
+VW8oCfH;k5kHQf5^TbQ^Gn0
+!s100 j9C4O>J^m>nh2j6AG[2V63
+R7
+33
+R40
+!i10b 1
+R34
+!s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd|
+!s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd|
+!i113 1
+R12
+R13
+Esomador_32
+Z48 w1621789523
+Z49 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z50 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R4
+R0
+Z51 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd
+Z52 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd
+l0
+L9
+V:ecPUBNZGD[G_J0]Ld;1G2
+!s100 oFEfiU_L^amN36?8A:27>2
+R7
+33
+R40
+!i10b 1
+R34
+Z53 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd|
+Z54 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd|
+!i113 1
+R12
+R13
+Artl
+R49
+R50
+R2
+R3
+R4
+DEx4 work 10 somador_32 0 22 :ecPUBNZGD[G_J0]Ld;1G2
+l24
+L20
+V6`Edf?I1BcImXVScmd`U40
+!s100 lEDkNT@D3X;8nPOFWkg=P3
+R7
+33
+R40
+!i10b 1
+R34
+R53
+R54
+!i113 1
+R12
+R13
+Etop_level
+Z55 w1621793344
+R29
+R49
+R50
+R2
+R3
+R4
+R0
+Z56 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd
+Z57 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd
+l0
+L36
+V<f7V4Nn]VzC0KESkUjfKa0
+!s100 `V3gHU5kB4J9GMD7cQ=8]1
+R7
+33
+R30
+!i10b 1
+R9
+Z58 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd|
+Z59 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd|
+!i113 1
+R12
+R13
+Artl
+R29
+R49
+R50
+R2
+R3
+R4
+DEx4 work 9 top_level 0 22 <f7V4Nn]VzC0KESkUjfKa0
+l106
+L53
+VfkzfA8c3_nTDRjM^2lklM1
+!s100 Z:JX=TL[P=OGD?:Zi]L2<2
+R7
+33
+R30
+!i10b 1
+R9
+R58
+R59
+!i113 1
+R12
+R13
+Eularv
+Z60 w1621789529
+R49
+R50
+R2
+R3
+R4
+R0
+Z61 8C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd
+Z62 FC:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd
+l0
+L6
+VI]zhRE?07>=0LL>FbN]8@1
+!s100 ocRZ5OP;5jUz0GfM_KLCe1
+R7
+33
+R40
+!i10b 1
+Z63 !s108 1621793624.000000
+Z64 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd|
+Z65 !s107 C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd|
+!i113 1
+R12
+R13
+Aula_arc
+R49
+R50
+R2
+R3
+R4
+DEx4 work 5 ularv 0 22 I]zhRE?07>=0LL>FbN]8@1
+l18
+L16
+VDORKfK5Je:Xa`2nHZkU4V1
+!s100 AziOhCB@>L_5:i40i@L``3
+R7
+33
+R40
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R12
+R13

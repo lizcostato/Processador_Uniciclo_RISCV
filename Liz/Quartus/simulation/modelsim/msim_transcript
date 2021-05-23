@@ -1,0 +1,175 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Uniciclo_RV_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:44 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/ularv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ulaRV
+# -- Compiling architecture ula_arc of ulaRV
+# End time: 15:13:45 on May 23,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:45 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/somador32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity somador_32
+# -- Compiling architecture RTL of somador_32
+# End time: 15:13:45 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:45 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/RISCV_Uniciclo_Pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package RISCV_Uniciclo_Pkg
+# End time: 15:13:45 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:45 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture RTL of PC
+# End time: 15:13:45 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:45 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2
+# -- Compiling architecture comportamental of mux2
+# End time: 15:13:45 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:45 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_rv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_rv
+# -- Compiling architecture RTL of mem_rv
+# End time: 15:13:46 on May 23,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:46 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/genImm32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity genImm32
+# -- Compiling architecture genImm32_op of genImm32
+# End time: 15:13:46 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:46 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control_alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control_alu
+# -- Compiling architecture RTL_ula of control_alu
+# End time: 15:13:46 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:46 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity controlador
+# -- Compiling architecture RTL of controlador
+# End time: 15:13:46 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:46 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/banc_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity banc_reg
+# -- Compiling architecture RTL of banc_reg
+# End time: 15:13:46 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:46 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/top_level.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package RISCV_Uniciclo_Pkg
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# End time: 15:13:47 on May 23,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:47 on May 23,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_Uniciclo_Pkg
+# -- Compiling entity mem_ROM_rv
+# -- Compiling architecture RTL of mem_ROM_rv
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(21): (vcom-1158) Integer exponentiation has overflowed; result is 0.
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(21): (vcom-1246) Range 0 to -1 is null.
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(29): (vcom-1158) Integer exponentiation has overflowed; result is 0.
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(29): (vcom-1246) Range 0 to -1 is null.
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(27): (vcom-1152) Index value 0 is out of index range 0 to -1 (null array) of work.mem_ROM_rv(RTL).mem_type.
+# ** Warning: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(27): (vcom-1152) Index value 0 is out of index range 0 to -1 (null array) of work.mem_ROM_rv(RTL).mem_type.
+# ** Error: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(43): (vcom-1154) No index value can belong to null index range 0 to -1.
+# ** Error: C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd(45): VHDL Compiler exiting
+# End time: 15:13:47 on May 23,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 6
+# ** Error: C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Uniciclo_RV_run_msim_rtl_vhdl.do line 19
+# C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -2008 -work work {C:/Users/Administrador/Documents/UNB/sexto_semestre/OAC/Projeto_Final/Quartus/mem_ROM_rv.vhd}"
