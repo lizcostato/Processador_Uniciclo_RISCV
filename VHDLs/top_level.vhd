@@ -37,22 +37,10 @@ entity top_level is
 	port (
     -- Input ---------------------------------------------------
 		  clock_in		: in std_logic;
-
-    -- Output --------------------------------------------------
-    	-- so pra testar a ligação
-          --intruc_out 		: out std_logic_vector(31 downto 0);
-          --r1_address_out	: out std_logic_vector(4 downto 0);
-          --r2_address_out	: out std_logic_vector(4 downto 0);
-          --immed_out			: out std_logic_vector(31 downto 0);
-          --ula_z_out			: out std_logic_vector(31 downto 0);
-          --pc_out			: out std_logic_vector(31 downto 0);
-      	--end_program		: out std_logic;
     );
 end top_level;
 
-architecture rtl of top_level is
-
-	
+architecture rtl of top_level is	
 	
 	-- sinais que vão ser necessários entre os blocos
 	 signal s_pcin 			: std_logic_vector(31 downto 0);
@@ -227,7 +215,7 @@ architecture rtl of top_level is
 
     comp_somador_PC: somador_32
       port map(
-        data1 => std_logic_vector(to_unsigned(1,32)), 
+        data1 => std_logic_vector(to_unsigned(4,32)), 
         data2 => s_pcout, 
         dataout => s_pc_plus4
       );
@@ -254,15 +242,5 @@ architecture rtl of top_level is
         sel => s_branch and not(s_branchula), 
         s => s_pcin
       );
-
-	
-    -- só pro primeiro teste
-    --r1_address_out <= rs1_field;
-    --r2_address_out <= rs2_field;
-	--immed_out <= std_logic_vector(s_immed);
-	--intruc_out <= s_instruction;
-    --ula_z_out <= s_ulaout;
-    --pc_out <= s_pcout;
-    --BREG <= s_BREG;
     
 end rtl;
