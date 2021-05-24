@@ -5,8 +5,11 @@ use ieee.std_logic_unsigned.all;
 
 entity ulaRV is
 	port (
+    -- Input ---------------------------------------------------
 		opcode : in std_logic_vector(3 downto 0);
 		A,B    : in std_logic_vector(31 downto 0);
+        
+    -- Output --------------------------------------------------
 		Z 	    : out std_logic_vector( 31 downto 0);
 		zero   : out std_logic
 		);
@@ -74,50 +77,50 @@ begin
 	when "1000" => 
 		if A < B then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <='1';
+			zero <='0';
 		end if;
 	when "1001" =>  
 		if unsigned(A) < unsigned(B) then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <='1';
+			zero <='0';
 		end if;
 	when "1010" =>  
 		if A >= B then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <='1';
+			zero <='0';
 		end if;
 	when "1011" =>  
 		if  unsigned(A) >= unsigned(B) then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <= '1';
+			zero <= '0';
 		end if;
 	when "1100" =>   
 		if A = B then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <='1';
+			zero <='0';
 		end if;
 	when "1101" =>   
 		if A /= B then
 			Z <= "00000000000000000000000000000001";
-			zero <= '0';
+			zero <= '1';
 		else
 			Z <= "00000000000000000000000000000000";
-			zero <='1';
+			zero <='0';
 		end if;
 	when others => 
 			Z <= "00000000000000000000000000000000";

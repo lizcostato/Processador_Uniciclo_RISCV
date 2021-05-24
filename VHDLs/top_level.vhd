@@ -59,6 +59,7 @@ architecture rtl of top_level is
 	 signal s_jlink         : std_logic;
 	 signal s_memwrite      : std_logic;
 	 signal s_regwrite      : std_logic;
+     signal s_jback			: std_logic;
 	 signal s_alusrc        : std_logic;
 	 signal s_isauipc 		: std_logic;
      signal s_islui			: std_logic_vector(4 downto 0);
@@ -108,7 +109,8 @@ architecture rtl of top_level is
 			aluop => s_con_alu,
 			isauipc => s_isauipc,
             islui => s_islui,
-			jlink => s_jlink
+			jlink => s_jlink,
+            jback => s_jback
 		);
 		
 	-- Controle da Ula
@@ -153,7 +155,7 @@ architecture rtl of top_level is
             r1_address => rs1_field, -- src1, 
             r2_address => rs2_field,-- mux_banreg, 
             w_address => rd_field,
-            datain => s_ula_ram, -- Mux_dataWrite, 
+            datain => s_datain, -- Mux_dataWrite, 
             r1 => s_ular1, 
             r2 => s_ular2
 			);
@@ -206,8 +208,8 @@ architecture rtl of top_level is
     -- MUX JAL
     comp_mux2_AUI_JAL: mux2
       port map(
-        a => s_pc_plus4, 
-        b => s_reg_aui, 
+        a => s_reg_aui, 
+        b => s_pcout, 
         sel => s_jlink, 
         s => s_datain
       );
@@ -216,30 +218,32 @@ architecture rtl of top_level is
     comp_somador_PC: somador_32
       port map(
         data1 => std_logic_vector(to_unsigned(4,32)), 
-        data2 => s_pcout, 
+        data2 => s_j_pc, 
         dataout => s_pc_plus4
       );
 
     comp_somador_PC_immed: somador_32
       port map(
         data1 => std_logic_vector(s_immed),
-        data2 => s_j_pc, 
+        data2 => s_pcout, 
         dataout => s_pc_immed
       );
-
-    comp_mux_PC_JAL : mux2
+	---  Mux do jr
+    comp_mux_PC_JR : mux2
       port map(
         a => s_pcout, 
         b => s_ular1, 
-        sel => s_jlink, 
+        sel => s_jback, 
         s => s_j_pc
       );
+      
+      ---------------------------------
 
     comp_mux2_PC_IMMED: mux2
       port map(
         a => s_pc_plus4, 
         b => s_pc_immed, 
-        sel => s_branch and not(s_branchula), 
+        sel => s_branch and s_branchula, 
         s => s_pcin
       );
     

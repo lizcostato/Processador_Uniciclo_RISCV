@@ -38,8 +38,6 @@ entity genImm32 is
         instr       :   in std_logic_vector(31 downto 0);
 
         -- Output --------------------------------------------------
-		
-		--ack_out	:	out std_logic;
 		imm32	:	out signed(31 downto 0)
     );
 
