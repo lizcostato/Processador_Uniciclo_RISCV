@@ -126,7 +126,7 @@ architecture RTL of controlador is
 			memreg <= '1';
 			memwrite <= '1';
 			regwrite <= '0';
-			alusrc <= '0';
+			alusrc <= '1';
 			aluop <= "010";
 			jlink <= '0';
 			isauipc <= '0';
