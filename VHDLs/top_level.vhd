@@ -190,7 +190,7 @@ architecture rtl of top_level is
       );
 
     -- Saida do Mux da ram para a ula
-    comp_mux1_ula_RAM: mux2
+    comp_mux2_ula_RAM: mux2
       port map(
         a =>s_ulaout, 
         b => s_outram, 
@@ -228,7 +228,7 @@ architecture rtl of top_level is
         data2 => s_pcout, 
         dataout => s_pc_immed
       );
-	---  Mux do jr
+	
     comp_mux_PC_JR : mux2
       port map(
         a => s_pcout, 
@@ -236,8 +236,6 @@ architecture rtl of top_level is
         sel => s_jback, 
         s => s_j_pc
       );
-      
-      ---------------------------------
 
     comp_mux2_PC_IMMED: mux2
       port map(
