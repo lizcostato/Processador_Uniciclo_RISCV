@@ -109,7 +109,7 @@ architecture RTL of controlador is
 			aluop <= "010";
 			jlink <= '0';
             jback <= '0';
-			isauipc <= '0';
+			isauipc <= '1';
 			islui <= "11111";
 			
 		-- Instrução LW
