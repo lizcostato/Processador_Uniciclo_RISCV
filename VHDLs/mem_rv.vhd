@@ -5,13 +5,13 @@ use std.textio.all;
 
 entity mem_rv is
 	port(
+    -- Input ---------------------------------------------------
 		clock   : in std_logic;
 		we      : in std_logic;
-		
--- Por conta da versão do quartus Foi necessario adicionar limites as variáveis de vetores
-
 		address  : in std_logic_vector(7 downto 0);
 		datain  : in std_logic_vector(31 downto 0);
+        
+    -- Output --------------------------------------------------
 		dataout : out std_logic_vector(31 downto 0)
 		);
 end entity mem_rv;

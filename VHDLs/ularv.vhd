@@ -5,8 +5,11 @@ use ieee.std_logic_unsigned.all;
 
 entity ulaRV is
 	port (
+    -- Input ---------------------------------------------------
 		opcode : in std_logic_vector(3 downto 0);
 		A,B    : in std_logic_vector(31 downto 0);
+        
+    -- Output --------------------------------------------------
 		Z 	    : out std_logic_vector( 31 downto 0);
 		zero   : out std_logic
 		);

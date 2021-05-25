@@ -9,7 +9,7 @@ use ieee.numeric_std.all;
 entity somador_32 is
 	port (
     -- Input ---------------------------------------------------
-		  data1	: in std_logic_vector(31 downto 0);
+		data1	: in std_logic_vector(31 downto 0);
         data2	: in std_logic_vector(31 downto 0);
 
     -- Output --------------------------------------------------
