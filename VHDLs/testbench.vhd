@@ -107,49 +107,64 @@ architecture tb of testbench is
     -- lui x7, 1044480 (11111111000000000000001110110111)
     wait for WAIT_TIME;
     
-    -- (00000000010000111101111000010011)
+    -- srli x28, x7, 4 (00000000010000111101111000010011)
     wait for WAIT_TIME;
     
-    -- (01000000010000111101111010010011)
+    -- srai x29, x7, 4 (01000000010000111101111010010011)
     wait for WAIT_TIME;
     
-    -- (00000000011000101010010000110011)
+    -- slt x8, x5, x6 (00000000011000101010010000110011)
     wait for WAIT_TIME;
     
-    -- (00000000010100110010010010110011)
+    -- slt x9, x6, x5 (00000000010100110010010010110011)
     wait for WAIT_TIME;
     
-    -- (00000000010100000011100110110011)
+    -- sltu x19, x0, x5 (00000000010100000011100110110011)
     wait for WAIT_TIME;
     
-    -- (00000000000000101011101000110011)
+    -- sltu x20, x5, x0 (00000000000000101011101000110011)
     wait for WAIT_TIME;
     
-    -- (00000000100000000000000011101111) -> esse é um jal
+    -- jal x1, 0x8(00000000100000000000000011101111)
     wait for WAIT_TIME;
     
-    -- 
+    -- sub x28, x5, x6 (01000000011000101000111000110011)
     wait for WAIT_TIME;
     
-    -- 
+    -- jalr x0, x1, 0 (1000000001100111)
     wait for WAIT_TIME;
     
-    -- 
+    -- jal x0, 0xc (110000000000000001101111)
     wait for WAIT_TIME;
     
-    -- 
+    -- addi x5, x0, 0xFFFFFFFE (11111111111000000000001010010011)
     wait for WAIT_TIME;
     
-    -- 
+    -- addi x5, x5, 2 (1000101000001010010011)
     wait for WAIT_TIME;
     
-    -- 
+    -- beq x5, x0, 0xFFFFFFFC (11111110000000101000111011100011)
     wait for WAIT_TIME;
     
-    -- 
+    -- addi x5, x5, 2 (1000101000001010010011)
     wait for WAIT_TIME;
     
-    -- 
+    -- beq x5, x0, 0xFFFFFFFC (11111110000000101000111011100011)
+    wait for WAIT_TIME;
+    
+    -- addi x5, x5, 0xFFFFFFFF (11111111111100101000001010010011)
+    wait for WAIT_TIME;
+    
+    -- bne x5, x0, 0xFFFFFFFC (11111110000000101001111011100011)
+    wait for WAIT_TIME;
+    
+    -- addi x5, x5, 0xFFFFFFFF (11111111111100101000001010010011)
+    wait for WAIT_TIME;
+    
+    -- bne x5, x0, 0xFFFFFFFC (11111110000000101001111011100011)
+    wait for WAIT_TIME;
+    
+    -- fim do programa
     wait for WAIT_TIME;
     
     s_clock_stop <= TRUE;
