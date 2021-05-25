@@ -21,6 +21,7 @@ entity controlador is
 		aluop : out std_logic_vector(2 downto 0);
 		-- Controle para mux j ----------------------------
 		jlink : out std_logic;
+        jback : out std_logic;
 		-- Controlador AUIPC
 		isauipc : out std_logic;
 		-- Controlador LUI
@@ -51,6 +52,7 @@ architecture RTL of controlador is
 			alusrc <= '0';
 			aluop <= "000";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -64,6 +66,7 @@ architecture RTL of controlador is
 			alusrc <= '1';
 			aluop <= "000";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -77,6 +80,7 @@ architecture RTL of controlador is
 			alusrc <= '0';
 			aluop <= "001";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -90,6 +94,7 @@ architecture RTL of controlador is
 			alusrc <= '1';
 			aluop <= "011";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "00000";
 			
@@ -103,6 +108,7 @@ architecture RTL of controlador is
 			alusrc <= '1';
 			aluop <= "010";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -116,6 +122,7 @@ architecture RTL of controlador is
 			alusrc <= '1';
 			aluop <= "010";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -126,9 +133,10 @@ architecture RTL of controlador is
 			memreg <= '1';
 			memwrite <= '1';
 			regwrite <= '0';
-			alusrc <= '0';
+			alusrc <= '1';
 			aluop <= "010";
 			jlink <= '0';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -143,19 +151,21 @@ architecture RTL of controlador is
 			alusrc <= '0';
 			aluop <= "111";
 			jlink <= '1';
+            jback <= '0';
 			isauipc <= '0';
 			islui <= "11111";
 
 			-- Instruções JALR
 		when "1100111" =>
-			branch <= '1';
+			branch <= '0';
 			memread <= '0';
 			memreg <= '0';
 			memwrite <= '0';
-			regwrite <= '1';
+			regwrite <= '0';
 			alusrc <= '0';
 			aluop <= "111";
-			jlink <= '1';
+			jlink <= '0';
+            jback <= '1';
 			isauipc <= '0';
 			islui <= "11111";
 			
@@ -165,6 +175,8 @@ architecture RTL of controlador is
 			memreg <= '0';
 			memwrite <= '0';
 			regwrite <= '0';
+			jlink <= '0';
+            jback <= '0';
 			alusrc <= '0';
 			aluop <= "111";
 			islui <= "11111";

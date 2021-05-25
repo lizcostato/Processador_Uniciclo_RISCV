@@ -36,7 +36,6 @@ package RISCV_Uniciclo_Pkg is
 	port (
     -- Input ---------------------------------------------------
 		clock : in std_logic;
-      we : in std_logic;
       datain : in std_logic_vector(31 downto 0);
 
     -- Output --------------------------------------------------
@@ -74,7 +73,7 @@ package RISCV_Uniciclo_Pkg is
     	-- dado leitura 1
       	r1 : out std_logic_vector(31 downto 0);
         -- dado leitura 2
-        r2: out std_logic_vector(31 downto 0)
+        r2: out std_logic_vector(31 downto 0);
  	);
     end component;
     
@@ -138,8 +137,6 @@ package RISCV_Uniciclo_Pkg is
 			port (
     -- Input ---------------------------------------------------
 			opcode	: in std_logic_vector(6 downto 0);
-       
-
     -- Output --------------------------------------------------
 			branch : out std_logic;
 			memread : out std_logic;
@@ -150,6 +147,7 @@ package RISCV_Uniciclo_Pkg is
 			aluop : out std_logic_vector(2 downto 0);
 		-- Controle para mux j ----------------------------
 			jlink : out std_logic;
+            jback : out std_logic;
 			isauipc : out std_logic;
 			islui : out std_logic_vector(4 downto 0)
 			);

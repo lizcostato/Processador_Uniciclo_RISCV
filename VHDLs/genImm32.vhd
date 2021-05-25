@@ -54,21 +54,30 @@ architecture genImm32_op of genImm32 is
     signal s_imm32:   	 	signed(31 downto 0);
 	--! Signal to alert that the output is ready
 	--signal s_ack_out:		std_logic;
-	
+	signal s_func3 : std_logic_vector(2 downto 0);
     
 	begin
     
 	s_instr <= instr;
     s_opcode <= instr(6 downto 0);
+    s_func3 <= instr(14 downto 12);
     
-    process(s_instr)
+    process(s_instr, s_func3)
     begin
     	case s_opcode is
         	when "0000011" => s_imm32 <= resize(signed(s_instr(31 downto 20)), 32); --I_type: opcode 0x03
-            when "0010011" => s_imm32 <= resize(signed(s_instr(31 downto 20)), 32); -- I_type: opcode 0x13
+            when "0010011" => 
+            case s_func3 is
+            	when "101" => s_imm32 <= resize(signed(s_instr(24 downto 20)), 32);
+                when "010" =>s_imm32 <= resize(signed(s_instr(24 downto 20)), 32); 
+                when "011" =>s_imm32 <= resize(signed(s_instr(24 downto 20)), 32);
+                when others => 
+            		s_imm32 <= resize(signed(s_instr(31 downto 20)), 32); -- I_type: opcode 0x13
+            end case;
+                    
             when "1100111" => s_imm32 <= resize(signed(s_instr(31 downto 20)), 32); -- I_type: opcode 0x67
             when "0100011" => s_imm32 <= resize(signed(s_instr(31 downto 25) & s_instr(11 downto 7)), 32); --S_type: opcode 0x23
-            when "1100011" => s_imm32 <= resize(signed(s_instr(31) & s_instr(7) & s_instr(30 downto 25) & s_instr(11 downto 8) & '0'), 32); --SB_type: opcode 0x63
+            when "1100011" => s_imm32 <= resize(signed(s_instr(31) & s_instr(7) & s_instr(30 downto 25) & s_instr(11 downto 8) & '0'), 32); --B_type: opcode 0x63
             when "0110111" => s_imm32 <= signed(resize(signed(s_instr(31 downto 12)),32) sll 12); --U_type: opcode 0x37
             when "1101111" => s_imm32 <= resize(signed(s_instr(31) & s_instr(19 downto 12) & s_instr(20) & s_instr(30 downto 21) & '0'), 32); --UJ_type: opcode 0x6F
             when others => s_imm32 <= (others => '0'); -- includes R_type: opcode 0x33

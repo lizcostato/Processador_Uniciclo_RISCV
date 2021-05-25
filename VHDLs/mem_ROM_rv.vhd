@@ -41,6 +41,6 @@ architecture RTL of mem_ROM_rv is
     
     begin
     
-    dataout <= mem(to_integer(unsigned(address)));
+    dataout <= mem(to_integer(unsigned(address))/4);
 	
 end RTL;
